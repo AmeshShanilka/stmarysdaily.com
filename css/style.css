@@ -10,6 +10,8 @@ import Fonts
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700i,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+/* Import Noto Sans Sinhala for better Sinhala font rendering */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@100..900&display=swap');
 
 /*****---------------------------------------- 1)
  2) font-family: 'Poppins', sans-serif;
@@ -52,7 +54,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -280,7 +282,7 @@ button {
 
 .read_more {
      font-size: 17px;
-     background-color: #3E3420;
+     background-color: rgb(0, 62, 74);
      color: #fff;
     
      width: 100%;
@@ -295,7 +297,7 @@ button {
 }
 
 .read_more:hover {
-     background: #D69325;
+     background: #2d838e;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -321,17 +323,23 @@ button {
      width: 100%;
      z-index: 9999999;
      height: 70px;
-     background:#D69325;
+     background:#2d838e;
 }
 
 
+.logo {
+    flex: 0 0 auto;
+}
 
+.navbar-area {
+    width: 100%;
+}
 
 
 
 .site-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Meka thama 'space-between' venuvata danna oni */
     align-items: center;
 }
 
@@ -351,7 +359,7 @@ button {
 }
 /* heder text hidth */
 .site-navbar ul li {
-    padding-right: 80px;
+    padding-right: 40px;
 }
 
 .site-navbar ul li:last-child {
@@ -475,7 +483,7 @@ button {
 /** banner section **/
 
 .full_bg {
-     background: url(../images/banner.png);
+     background: url(../images/banner1.png);
      background-size: cover;
      background-position: right;
      background-repeat: no-repeat;
@@ -557,7 +565,7 @@ button {
 }
 
 
-.photog .read_more:hover {background: #684712; color: #fff;}
+.photog .read_more:hover {background: #2d838e; color: #fff;}
 .slider_main .carousel-item {
      height: 100%;
      width: 100%;
@@ -568,7 +576,7 @@ button {
 #banner1 .carousel-control-next {
      width:40px;
      height: 40px;
-     background-color: #3E3420;
+     background-color: #2d838e;
      color: #fff;
      font-size: 20px;
      opacity: 1;
@@ -592,7 +600,7 @@ button {
 #banner1 .carousel-control-prev:focus,
 #banner1 .carousel-control-prev:hover {
      background-color: #fff;
-     color: #ed1c24;
+     color: #2d838e;
 }
 
 
@@ -632,7 +640,7 @@ button {
     position: absolute;
     content: "";
     bottom: 0px;
-    background: #ffc400;
+    background: #2d838e;
     width: 93px;
     height: 11px;
     left: 0;
@@ -693,11 +701,11 @@ button {
 
 
 .protect_bg  {
-       background:url(../images/bg-imgs/church2.png);
+        background:url(../images/bg-imgs/church2.png);
      background-repeat: no-repeat;
      background-position: center;
      background-size: 100% 100%;
-       padding-top: 80px;
+        padding-top: 80px;
       padding-bottom: 48px;
 }
 
@@ -973,7 +981,7 @@ button {
 }
 
 .main_form .send_btn:hover {
-     background-color: #e92f0b;
+     background-color: #2d838e;
      transition: ease-in all 0.5s;
      color: #fff;
 }
@@ -1050,7 +1058,7 @@ padding: 80px 0;
 .subsci_btn:hover {
     transition: ease-in all 0.5s;
     color: #fff;
-    background-color: #e92f0b;
+    background-color: rgb(18, 158, 44);
 }
 
 #colof *::placeholder {
@@ -1099,7 +1107,7 @@ ul.menu_footer li a {
 }
 
 ul.menu_footer li a:hover {
-    color: #e92f0b;
+    color: #2d838e;
 }
 
 
@@ -1148,7 +1156,7 @@ ul.top_infomation li i:hover {
 
 .copyright {
     margin-top: 60px;
-   
+    
     padding-bottom: 20px;
 }
 
@@ -1167,7 +1175,7 @@ ul.top_infomation li i:hover {
 }
 
 .copyright a:hover {
-    color: #ed1c24;
+    color: #2d838e;
 }
 
 
@@ -1175,7 +1183,7 @@ ul.top_infomation li i:hover {
 
 
 
-/**  inner page css **/
+/** inner page css **/
 
 
 
@@ -1200,3 +1208,24 @@ padding-bottom: 40px;}
     padding-top: 145px;
     padding-bottom: 80px;
 }
+
+/* --------------------------------------------------------------------- 
+   Noto Sans Sinhala settings (Updated for Sinhala support)
+--------------------------------------------------------------------- */
+.nostrud h3 {
+    font-family: 'Noto Sans Sinhala', sans-serif !important;
+    letter-spacing: 0.5px; /* Sinhala akuru athara thawa lassanata penna */
+    line-height: 1.6;
+}
+
+.nostrud p {
+    font-family: 'Noto Sans Sinhala', sans-serif !important;
+    font-size: 16px; /* Slightly increased for readability */
+    line-height: 1.8;
+}
+
+/* Globally apply to body as a fallback */
+body {
+    font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+}
+
